@@ -1,0 +1,50 @@
+<?xml version="1.0"?>
+<config>
+    <modules>
+        <Centerkom_Fcp><!-- fast change price  -->
+            <version>0.2.0</version>
+        </Centerkom_Fcp>
+    </modules>
+    <global>
+        <blocks>
+            <fcp>
+                <class>Centerkom_Fcp_Block</class>
+            </fcp>
+            <adminhtml>
+                <rewrite>
+                    <catalog_product>Centerkom_Fcp_Block_Adminhtml_Catalog_Product</catalog_product>
+                    <catalog_product_grid>Centerkom_Fcp_Block_Adminhtml_Catalog_Product_Grid</catalog_product_grid>
+                    <widget_grid_column>Centerkom_Fcp_Block_Adminhtml_Widget_Grid_Column</widget_grid_column>
+                </rewrite>
+            </adminhtml>
+        </blocks>
+    </global>   
+	<admin>
+        <routers>
+            <fcp>
+                <use>admin</use>
+                <args>
+                    <module>Centerkom_Fcp</module>
+                    <frontName>fcp</frontName>
+                </args>
+            </fcp>
+        </routers>
+    </admin>
+    <adminhtml>    
+		<acl>
+            <resources>
+                <admin>
+                    <children>
+                        <system>
+                            <children>
+                                <fcp_adminform>
+                                    <title>Fast change price</title>
+                                </fcp_adminform>
+                            </children>
+                        </system>
+                    </children>
+                </admin>
+            </resources>
+        </acl>
+	</adminhtml>
+</config>

@@ -1,0 +1,16 @@
+{
+    "name": "OpenMageModuleFostering/Centerkom_Fcp",
+    "type": "magento-module",
+    "license": "GPL",
+    "homepage": "",
+    "description": "jakis opis",
+    "authors": [
+    {
+        "name": "Jaroslaw",
+        "email": "jarek@herisz.pl"
+    }
+],
+    "suggest": {
+        "magento-hackathon/magento-composer-installer": "*"
+    }
+}
